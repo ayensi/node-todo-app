@@ -5,7 +5,7 @@ const mysql = require("mysql")
 const session = require('express-session');
 const { restart } = require("nodemon");
 const con = mysql.createConnection({
-    host:"n1nlmysql19plsk.secureserver.net",
+    host:"localhost",
     port:"3306",
     user:"okan1234",
     password:"okan1234",
@@ -15,7 +15,7 @@ const con = mysql.createConnection({
 const app = express()
 const PORT = process.env.PORT || 3000;
 app.use(session({
-    secret: 'Özel-Anahtar',
+    secret: 'aminuumar',
     resave: false,
     saveUninitialized: true
   }));
